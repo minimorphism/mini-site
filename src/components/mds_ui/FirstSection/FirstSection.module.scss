@@ -1,0 +1,105 @@
+// Copyright (c) 2026 minimorphism
+// License GPLv3
+
+.section {
+  position: relative;
+  width: 100%;
+  min-height: 100dvh;
+
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  perspective: 1400px;
+}
+
+.content {
+  position: relative;
+  z-index: 5;
+
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding-left: min(10vw, 17.7778dvh);
+  padding-right: min(10vw, 17.7778dvh);
+  padding-top: min(8.4375vw, 15dvh);
+
+  gap: min(3.9375vw, 7dvh);
+}
+
+.whiteBox {
+  width: 100%;
+  height: min(12.2396vw, 21.7593dvh);
+
+  border-radius: min(10vw, 17.7778dvh);
+}
+
+.title {
+  font-size: min(4.5vw, 8dvw);
+  letter-spacing: min(0.03646vw, 0.064815dvh);
+}
+
+.actions {
+  display: flex;
+  flex-direction: row;
+
+  gap: min(2vw, 3.5556dvh);
+}
+
+.readManifestoBtn {
+  height: min(4.9479vw, 8.7963dvh) !important;
+  border-radius: min(1.8vw, 3.2dvh) !important;
+
+  width: min(20vw, 35.5556dvh);
+
+  padding: 0 !important;
+
+  font-size: min(1.7vw, 3.0222dvh);
+  letter-spacing: min(0.07292vw, 0.12963dvh);
+}
+
+.goToBtn {
+  height: min(4.9479vw, 8.7963dvh) !important;
+  width: min(13.8vw, 24.5333dvh) !important;
+
+  border-radius: min(1.8vw, 3.2dvh) !important;
+
+  padding: 0 !important;
+
+  font-size: min(1.7vw, 3.0222dvh);
+}
+
+@media (max-width: 600px) {
+  .title {
+    font-size: clamp(8px, 4vw, 30px);
+  }
+
+  .actions {
+    width: 100%;
+    gap: 10px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .readManifestoBtn {
+    justify-self: start;
+    width: 45vw;
+    min-height: 30px;
+    font-size: clamp(12px, 3vw, 20px);
+    border-radius: 999px !important;
+  }
+
+  .goToBtn {
+    justify-self: end;
+    min-width: 35vw;
+    min-height: 30px;
+    font-size: clamp(12px, 3vw, 20px);
+    border-radius: 999px !important;
+  }
+}

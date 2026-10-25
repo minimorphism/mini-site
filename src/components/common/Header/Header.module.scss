@@ -1,0 +1,240 @@
+// Copyright (c) 2026 minimorphism
+// License GPLv3
+
+.header {
+  position: absolute;
+  inset: 0 0 auto;
+
+  z-index: 100;
+
+  width: 100%;
+  height: 135px;
+
+  padding: 0 56px;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+
+  box-sizing: border-box;
+
+  pointer-events: none;
+}
+
+.header.white {
+  background-color: #000000;
+
+  --header-fg: #ffffff;
+  --header-muted: rgba(255, 255, 255, 0.5);
+  --header-border: rgba(255, 255, 255, 0.16);
+}
+
+.header.black {
+  background-color: #ffffff;
+
+  --header-fg: #050505;
+  --header-muted: rgba(5, 5, 5, 0.5);
+  --header-border: rgba(5, 5, 5, 0.15);
+}
+
+.logoButton {
+  justify-self: start;
+
+  width: 32px;
+  height: 32px;
+
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 0;
+  background: transparent;
+
+  color: var(--header-fg);
+
+  cursor: pointer;
+  pointer-events: auto;
+
+  transition: transform 420ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.logoButton:hover {
+  transform: translateX(1px) rotate(6deg) scale(1.025);
+}
+
+.logoButton:active {
+  transform: translateX(1px) rotate(2deg) scale(0.985);
+}
+
+.logo {
+  width: 5.9dvh;
+  height: 5.9dvh;
+
+  overflow: visible;
+  transform-origin: center;
+  transition: filter 450ms ease;
+}
+
+.logoFrame {
+  stroke: var(--header-border);
+
+  transition:
+    stroke 350ms ease,
+    fill 350ms ease;
+}
+
+.logoPath {
+  stroke: var(--header-fg);
+  stroke-width: 1.6;
+
+  stroke-linecap: square;
+  stroke-linejoin: miter;
+
+  transition:
+    transform 420ms cubic-bezier(0.22, 1, 0.36, 1),
+    stroke-width 300ms ease;
+}
+
+.logoButton:hover .logo {
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.1));
+}
+
+.black .logoButton:hover .logo {
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.1));
+}
+
+.logoButton:hover .logoFrame {
+  stroke: var(--header-fg);
+}
+
+.logoButton:hover .logoPath {
+  stroke-width: 2;
+}
+
+.logoButton:hover .logoPath:first-of-type {
+  transform: translateX(-0.5px);
+}
+
+.logoButton:hover .logoPath:last-of-type {
+  transform: translateX(0.5px);
+}
+
+.companyName {
+  position: relative;
+
+  justify-self: center;
+
+  color: var(--header-fg);
+
+  letter-spacing: 1.2px;
+  font-size: clamp(32px, 10vw, 48px);
+  font-weight: 400;
+  line-height: 1;
+
+  pointer-events: auto;
+  cursor: default;
+
+  transform-origin: center bottom;
+
+  transition:
+    transform 450ms cubic-bezier(0.22, 1, 0.36, 1),
+    letter-spacing 450ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.companyName:hover {
+  transform: translateY(-1px);
+  letter-spacing: 0.012em;
+}
+
+.companyText {
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+}
+
+.rightMark {
+  justify-self: end;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: auto;
+
+  cursor: pointer;
+}
+
+.rightImage {
+  display: block;
+
+  margin-right: -23px;
+  width: 12.3dvw;
+  height: auto;
+
+  transform-origin: center;
+
+  user-select: none;
+  -webkit-user-drag: none;
+
+  transition:
+    transform 800ms cubic-bezier(0.16, 1, 0.3, 1),
+    filter 700ms ease;
+}
+
+.rightMark:hover .rightImage {
+  transform: scale(1.1);
+
+  filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.12));
+}
+
+.white .rightMark:hover .rightImage {
+  filter: drop-shadow(0 8px 22px rgba(255, 255, 255, 0.13));
+}
+
+.rightMark:hover {
+  animation: rightMarkFloat 2.6s ease-in-out infinite;
+}
+
+@keyframes rightMarkFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-1px);
+  }
+}
+
+@media (max-width: 768px) {
+  .rightImage {
+    display: none;
+  }
+}
+
+@media (max-width: 525px) {
+  .companyName {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 425px) {
+  .companyName {
+    font-size: 26px;
+  }
+
+  .header {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 375px) {
+  .header {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 320px) {
+  .header {
+    padding: 0 40px;
+  }
+}

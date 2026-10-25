@@ -1,0 +1,110 @@
+// Copyright (c) 2026 minimorphism
+// License GPLv3
+
+.section {
+  position: relative;
+
+  width: 100%;
+  min-height: 100dvh;
+
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+
+  perspective: 1400px;
+}
+
+.backgroundBox {
+  grid-column: 1 / -1;
+
+  width: 100%;
+  height: 100dvh;
+
+  border-radius: 0 !important;
+  padding: 0 !important;
+
+  > div {
+    width: 100%;
+    height: 100dvh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding-left: min(9.375vw, 16.6667dvh, 180px);
+    padding-right: min(9.375vw, 16.6667dvh, 180px);
+    padding-bottom: min(4.6875vw, 8.3333dvh, 90px);
+
+    gap: 4dvh;
+    box-sizing: border-box;
+  }
+}
+
+.content {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: 1.2fr 0.695fr;
+}
+
+.title {
+  font-size: clamp(12px, min(3.6458vw, 6.4815dvh), 70px);
+}
+
+.description {
+  max-width: min(41.6667vw, 74.0741dvh, 900px);
+  max-height: 500px;
+
+  font-size: clamp(8px, min(2.28125vw, 5.8333dvh), 63px);
+
+  line-height: min(4.2708vw, 7.5926dvh, 82px);
+}
+
+.exampleBox {
+  width: min(33.3333vw, 59.2593dvh, 640px);
+  height: min(40.1042vw, 71.2963dvh, 770px);
+
+  border-radius: 140px !important;
+}
+
+@media (max-width: 1500px), (orientation: portrait) {
+  .exampleBox {
+    display: none;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+  }
+
+  .description {
+    text-align: center;
+    line-height: normal;
+  }
+
+  .backgroundBox {
+    > div {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+  }
+}
+
+@media (max-width: 600px), (orientation: portrait) {
+  .description {
+    font-size: 4vw;
+    max-width: 60vw;
+  }
+
+  .title {
+    font-size: 7vw;
+    text-align: center;
+  }
+}

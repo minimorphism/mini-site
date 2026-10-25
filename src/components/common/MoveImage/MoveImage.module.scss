@@ -1,0 +1,54 @@
+// Copyright (c) 2026 minimorphism
+// License GPLv3
+
+.visual {
+  position: absolute;
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  pointer-events: none;
+}
+
+.phoneScene {
+  --rotate-x: 0deg;
+  --rotate-y: 0deg;
+  --skew-x: 0deg;
+
+  position: relative;
+  transform-style: preserve-3d;
+
+  pointer-events: auto;
+  transform-origin: center bottom;
+
+  transform: perspective(900px) rotateX(var(--rotate-x))
+    rotateY(var(--rotate-y)) skewX(var(--skew-x));
+
+  transition: transform 120ms cubic-bezier(0.22, 1, 0.36, 1);
+
+  will-change: transform;
+}
+
+.phoneImage {
+  position: relative;
+
+  z-index: 2;
+
+  display: block;
+
+  width: var(--width-image, 67.7dvh);
+  height: auto;
+
+  object-fit: contain;
+
+  user-select: none;
+  pointer-events: none;
+
+  -webkit-user-drag: none;
+
+  transform-origin: center bottom;
+
+  transition: filter 250ms ease;
+}

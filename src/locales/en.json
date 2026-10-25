@@ -1,0 +1,93 @@
+{
+	"main": {
+		"first": {
+			"first-btn": "Learn more",
+			"second-btn": "Download"
+		},
+
+		"frisp": {
+			"btn": "Coming Soon"
+		}
+	},
+
+	"volt": {
+		"desc": {
+			"title": "What is this anyway?",
+			"body": "VOLT is a crypto\npayment service for\nmaking purchases in\noffline and online\nstores",
+			"btn": "Download"
+		},
+
+		"videos": {
+			"first-text": "User-friendly interface",
+			"second-text": "Scan the QR code",
+			"third-text": "Aaaand... Done!"
+		},
+
+		"volt-id": {
+			"title": "VOLT ID - One Account\nFor Everything",
+			"desc": "Create a VOLT ID and the\nentire app becomes available:\none-click payment, easy\nwallet connection, and\nparticipation in exclusive\ntoken giveaways",
+			"btn": "Download (Be Free)"
+		}
+	},
+
+	"mds-ui": {
+		"first": {
+			"first-btn": "Read Manifesto",
+			"second-btn": "Go to npm"
+		},
+
+		"desc": {
+			"title": "We looked around...",
+			"desc": "Flat is too flat (yeah,\ntoo flat) and boring.\nNeumorphism is\nunwieldy in reality.\nminimorphism design\nsystem - is the middle\nground. A design\nlanguage built on\nPhysics, Material, and\nLight"
+		},
+
+		"objects": {
+			"title": "Everything is an Object",
+			"desc": "No flat drawings or fake depth. Every button, card, and\ninput is a solid physical object lying on a surface. You\ndon't just see the UI - you feel its weight"
+		},
+
+		"materials": {
+			"title": "Three Materials. Zer0 Noise",
+			"first-desc": "True Black - The\ndepth of space.\nBackgrounds &\nactive energy",
+			"second-desc": "Pure White -\nLight & high\ncontrast",
+			"third-desc": "Anodized Graphite\n- Tactile industrial\nmetal for\nsecondary layers"
+		},
+
+		"light": {
+			"title": "Sculpted with Light, Soft by Geometry",
+			"desc": "No fake color gradients. Volume is created purely with\nphysical light and inner shadows. Soft rounded shapes\ncontrast with a steel display typeface."
+		},
+
+		"download": {
+			"title": "Feel the interface with your fingertips",
+			"btn": "Go to GitHub"
+		}
+	},
+
+	"volt-download": {
+		"first": {
+			"first-btn": "Download (.apk)",
+			"second-btn": "For Developers"
+		},
+
+		"frontend": {
+			"title": "For Developers",
+			"desc": "VOLT design components\nand style",
+			"btn": "Go to GitHub"
+		},
+
+		"system": {
+			"desc": "Native-level\ndevice integration",
+			"btn": "Go to GitHub"
+		},
+
+		"core": {
+			"desc": "VOLT Wallet Cryptography",
+			"btn": "Go to GitHub"
+		}
+	},
+
+	"footer": {
+		"copyrights": "All rights reserved."
+	}
+}

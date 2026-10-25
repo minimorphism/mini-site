@@ -1,0 +1,35 @@
+// Copyright (c) 2026 minimorphism
+// License GPLv3
+
+.scrollHint {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  font-family: monospace;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.label {
+  white-space: nowrap;
+}
+
+.arrow {
+  font-size: 22px;
+
+  animation: scrollArrow 1.5s ease-in-out infinite;
+}
+
+@keyframes scrollArrow {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(7px);
+  }
+}

@@ -1,0 +1,143 @@
+// Copyright (c) 2026 minimorphism
+// License GPLv3
+
+.section {
+  position: relative;
+
+  width: 100%;
+  min-height: 100dvh;
+
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+
+  perspective: 1400px;
+}
+
+.content {
+  width: 100%;
+  min-height: 100dvh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+
+  padding: 77px 6.2dvw;
+  padding-bottom: 122px;
+
+  gap: 6.5dvh;
+}
+
+.title {
+  font-size: 3.65vw;
+}
+
+.card {
+  width: 100%;
+  max-height: 767px;
+  flex-grow: 1;
+
+  display: flex;
+  flex-direction: column;
+  border-radius: 14dvh !important;
+  padding: 0 !important;
+
+  > div {
+    max-height: 767px;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    flex-grow: 1;
+  }
+}
+
+.partDesc {
+  justify-self: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 9dvh;
+  padding-bottom: 40px;
+  padding-top: 30px;
+  max-height: 767px;
+  gap: 3dvh;
+}
+
+.description {
+  font-size: clamp(20px, 3.5vw, 80px);
+  letter-spacing: 1.3px;
+  line-height: clamp(20px, 8dvh, 90px);
+}
+
+.downloadBtn {
+  width: 100%;
+  max-width: 660px;
+  max-height: 110px;
+  border-radius: 10dvh;
+
+  font-size: 2vw;
+  flex-grow: 1;
+}
+
+.imageBox {
+  justify-self: end;
+  width: 100%;
+  max-width: 734px;
+  max-height: 767px;
+
+  border-radius: 14dvh !important;
+}
+
+.image {
+  width: 30.5dvw;
+  max-width: 580px;
+}
+
+@media (max-width: 1848px), (orientation: portrait) {
+  .imageBox,
+  .image {
+    display: none;
+  }
+
+  .content {
+    min-height: auto;
+    padding: 5dvw 12dvw;
+  }
+
+  .card {
+    flex-grow: 1;
+    border-radius: 6dvh !important;
+
+    > div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .partDesc {
+    align-items: center;
+    padding: 4dvw 4dvw;
+    padding-top: 40px;
+    height: auto;
+  }
+
+  .downloadBtn {
+    padding: 0 !important;
+    height: 8vh;
+    font-size: 3vh;
+  }
+
+  .title {
+    font-size: clamp(30px, 5vw, 50px);
+  }
+
+  .description {
+    text-align: center;
+    font-size: 3vh;
+    line-height: normal;
+  }
+}

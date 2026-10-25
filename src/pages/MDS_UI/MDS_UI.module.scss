@@ -1,0 +1,163 @@
+// Copyright (c) 2026 minimorphism
+// License GPLv3
+
+.main {
+  position: fixed;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100dvh;
+
+  overflow: hidden;
+  color: #fff;
+
+  touch-action: none;
+  user-select: none;
+  isolation: isolate;
+}
+
+.viewport {
+  position: relative;
+
+  width: 100%;
+  height: 100dvh;
+
+  overflow: hidden;
+}
+
+.camera {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 600dvh;
+
+  transform-origin: 50% 0;
+  transform-style: flat;
+
+  will-change: transform;
+  contain: layout paint style;
+  backface-visibility: hidden;
+
+  translate: 0 0;
+}
+
+.scene {
+  position: relative;
+
+  width: 100%;
+  height: 300dvh;
+
+  transform-style: flat;
+}
+
+.section {
+  position: relative;
+
+  width: 100%;
+  height: 100dvh;
+
+  overflow: hidden;
+
+  transform: none;
+  transform-style: flat;
+
+  backface-visibility: hidden;
+}
+
+.progress {
+  position: fixed;
+
+  z-index: 100;
+
+  top: 50%;
+  right: 32px;
+
+  transform: translateY(-50%);
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 11px;
+}
+
+.progressDot {
+  width: 12px;
+  height: 12px;
+
+  padding: 0;
+  border-radius: 50%;
+  border: 0;
+
+  background: #ffffff;
+
+  box-shadow:
+    0px 1px 2px rgba(0, 0, 0, 0.5),
+    0px 0px 5px rgba(255, 255, 255, 0.15),
+    inset 0px 83px 119px -92px rgba(255, 255, 255, 0.3),
+    inset 0px -26px 64.8px -50px rgba(0, 0, 0, 0.5),
+    inset 0px 0px 24px 5px rgba(120, 120, 120, 0.03);
+
+  cursor: pointer;
+
+  transition:
+    transform 180ms ease,
+    background 180ms ease,
+    border-color 180ms ease;
+}
+
+.progressDot:hover {
+  transform: scale(1.5);
+}
+
+.progressDotActive {
+  transform: scale(1.5);
+}
+
+.counter {
+  position: fixed;
+
+  z-index: 100;
+
+  left: 40px;
+  bottom: 35px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  font-family: monospace;
+
+  font-size: 12px;
+
+  letter-spacing: 0.2em;
+
+  pointer-events: none;
+}
+
+.counterDivider {
+  opacity: 0.3;
+}
+
+@media (max-width: 768px) {
+  .progress {
+    right: 17px;
+  }
+
+  .counter {
+    left: 20px;
+
+    bottom: 20px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .camera {
+    will-change: auto;
+  }
+}

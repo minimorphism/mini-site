@@ -1,0 +1,104 @@
+// Copyright (c) 2026 minimorphism
+// License GPLv3
+
+.section {
+  position: relative;
+
+  width: 100%;
+  min-height: 100dvh;
+
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+
+  perspective: 1400px;
+  padding-left: 48.3vw;
+  padding-top: 2vh;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  font-size: clamp(24px, 9vw, 160px);
+}
+
+.actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+
+  gap: clamp(10px, 2.2vw, 40px);
+}
+
+.downloadBtn {
+  padding: 0 !important;
+  height: 4.8vw;
+  max-height: 95px;
+
+  width: 20vw;
+  font-size: clamp(4px, 1.9vw, 35px);
+  border-radius: 35px !important;
+}
+
+.forDevelopersBtn {
+  padding: 0 !important;
+  height: 4.8vw;
+  max-height: 95px;
+
+  width: 19.3vw;
+  font-size: clamp(12px, 1.9vw, 35px);
+  border-radius: 35px !important;
+}
+
+.image {
+  position: absolute;
+  z-index: 1;
+
+  left: 0;
+  bottom: 0;
+
+  margin-left: clamp(12px, 6.3vw, 125px);
+
+  object-fit: contain;
+  object-position: bottom;
+
+  --width-image: clamp(300px, 56dvh, 700px);
+}
+
+@media (max-width: 1550px), (orientation: portrait) {
+  .image {
+    display: none;
+  }
+
+  .section {
+    padding: 0;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 1200px) {
+  .title {
+    font-size: 20vw;
+  }
+
+  .downloadBtn {
+    height: 8vw;
+    width: 32vw;
+
+    font-size: 3vw;
+  }
+
+  .forDevelopersBtn {
+    height: 8vw;
+    width: 32vw;
+
+    font-size: 3vw;
+  }
+}

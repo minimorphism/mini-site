@@ -1,0 +1,144 @@
+// Copyright (c) 2026 minimorphism
+// License GPLv3
+
+.section {
+  position: relative;
+
+  width: 100%;
+  min-height: 100dvh;
+
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  perspective: 1400px;
+
+  padding-left: 120px;
+  padding-right: 120px;
+
+  padding-bottom: 140px;
+}
+
+.card {
+  width: 100%;
+  height: 75dvh;
+  max-height: 767px;
+
+  display: flex;
+  flex-direction: column;
+  border-radius: 8vw !important;
+  padding: 0 !important;
+
+  overflow: hidden;
+
+  > div {
+    width: 100%;
+    height: 75dvh;
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    flex-grow: 1;
+    min-height: 0;
+  }
+}
+
+.content {
+  min-width: 0;
+  justify-self: end;
+
+  height: 75dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding-right: 7.8vw;
+
+  gap: 3vh;
+}
+
+.image {
+  justify-self: start;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: 750px;
+}
+
+.title {
+  font-size: clamp(12px, 10vw, 200px);
+}
+
+.description {
+  font-size: clamp(12px, 2.6vw, 50px);
+}
+
+.btnGoTo {
+  height: 6vw;
+  width: 16cqw;
+
+  max-width: 300px;
+  max-height: 110px;
+
+  font-size: clamp(12px, 1.9vw, 35px);
+
+  padding: 0 !important;
+  border-radius: 2vw !important;
+}
+
+@media (max-width: 1800px) {
+  .image,
+  .imageBox {
+    display: none;
+  }
+
+  .card {
+    > div {
+      display: flex;
+      flex-direction: column;
+
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .content {
+    padding: 0;
+  }
+}
+
+@media (max-width: 1600px), (orientation: portrait) {
+  .section {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+
+  .card {
+    height: 70dvh;
+    max-height: 600px;
+  }
+}
+
+@media (max-width: 600px) {
+  .section {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .btnGoTo {
+    width: 32vw;
+    height: 5vh;
+
+    font-size: 3.5vw;
+    border-radius: 20px !important;
+  }
+
+  .description {
+    max-width: 200px;
+  }
+
+  .title {
+    font-size: 6vw;
+  }
+}

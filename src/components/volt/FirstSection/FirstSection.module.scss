@@ -1,0 +1,52 @@
+// Copyright (c) 2026 minimorphism
+// License GPLv3
+
+.section {
+  position: relative;
+
+  width: 100%;
+  min-height: 100dvh;
+
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+
+  perspective: 1400px;
+  background-color: #000000;
+}
+
+.content {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+
+  object-fit: contain;
+  object-position: bottom;
+}
+
+.video {
+  width: 100dvw;
+  height: auto;
+}
+
+@media (max-height: 965px) {
+  .video {
+    width: 180dvh;
+  }
+}
+
+@media (max-width: 520px), (orientation: portrait) {
+  .content {
+    position: relative;
+  }
+
+  .video {
+    width: 150dvw;
+    -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+  }
+}
