@@ -8,9 +8,6 @@ This is the source code for the official website [minimorphism.com](https://mini
 2. `npm start` - start localhost
 
 ### Note
-Our site is hosted exclusively on the IPFS network. If access to minimorphism.com is blocked by your service provider, please access it via a functional IPFS gateway. The current CID is:
+Our site is hosted exclusively on the IPFS network. If access to minimorphism.com is blocked by your service provider, please access it via a functional IPFS gateway. The current **CID** is: ```bafybeicc6yr2gimo2lysn2pkyjjsm2suracedbscju5yia6scu2eiwpgey```
 
 And **Be Free**
-
-### Our site is available in the IPFS network!
-**CID:** bafybeicc6yr2gimo2lysn2pkyjjsm2suracedbscju5yia6scu2eiwpgey
